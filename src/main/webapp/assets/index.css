@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.admin-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1101;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name, .user-email {
+    font-size: 14px;
+}
+
+.logout-button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    background: #f8f8f8;
+    border-right: 1px solid #ccc;
+    padding: 15px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li:hover {
+    background: #e0e0e0;
+}
+
+/* Main Content */
+.content {
+    margin-left: 20px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.active ~ .content {
+    margin-left: 260px;
+}
+
+.operation {
+    display: none;
+}
+
+.operation.active {
+    display: block;
+}
+
+/* Search Customer Section */
+#searchContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#searchBar {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#filterOptions {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#searchButton {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #e0e0e0;
+}
+
+#customerList {
+    margin-top: 20px;
+    display: none;
+}
+
+#customerList table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#customerList th, #customerList td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#customerList th {
+    background: #f0f0f0;
+}
+
+
+
+/* View Complaints Section */
+#complaintsSearch {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#complaintsSearchBar {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#complaintsSearchButton {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+#complaintsSearchButton:hover {
+    background-color: #e0e0e0;
+}
+
+#complaintsList {
+    margin-top: 20px;
+    display: none;
+}
+
+#complaintsList table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#complaintsList th, #complaintsList td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#complaintsList th {
+    background: #f0f0f0;
+}
+
